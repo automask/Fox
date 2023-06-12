@@ -76,7 +76,7 @@ namespace Wox
                         Activate();
                         QueryTextBox.Focus();
                         UpdatePosition();
-                        _settings.ActivateTimes++;
+                        //_settings.ActivateTimes++;
                         if (!_viewModel.LastQuerySelected)
                         {
                             QueryTextBox.SelectAll();
@@ -139,15 +139,19 @@ namespace Wox
             {
                 if (e.Button == MouseButtons.Left)
                 {
-                    if (menu.Visible)
-                    {
-                        menu.Close();
-                    }
-                    else
-                    {
-                        var p = System.Windows.Forms.Cursor.Position;
-                        menu.Show(p);
-                    }
+                    //Visibility = (Visibility == Visibility.Visible) ? Visibility.Hidden : Visibility.Visible;
+                    Visibility = Visibility.Hidden;
+                    App.API.OpenSettingDialog();
+
+                    //if (menu.Visible)
+                    //{
+                    //    menu.Close();
+                    //}
+                    //else
+                    //{
+                    //    var p = System.Windows.Forms.Cursor.Position;
+                    //    menu.Show(p);
+                    //}
                 }
             };
         }
