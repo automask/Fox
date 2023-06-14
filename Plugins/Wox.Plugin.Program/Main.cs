@@ -189,7 +189,8 @@ namespace Wox.Plugin.Program
             {
                 Logger.WoxDebug($" uwp: <{uwp.DisplayName}> <{uwp.UserModelId}>");
             }
-            _settings.LastIndexTime = DateTime.Today;
+            //_settings.LastIndexTime = DateTime.Today;
+            _settings.LastIndexTime = DateTime.MinValue;
             
         }
 
