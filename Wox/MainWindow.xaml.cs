@@ -112,8 +112,8 @@ namespace Wox
         {
             Top = WindowTop();
             Left = WindowLeft();
-            _settings.WindowTop = Top;
-            _settings.WindowLeft = Left;
+            _settings.WindowTop = 0;
+            _settings.WindowLeft = 0;
         }
 
         private void InitializeNotifyIcon()
@@ -262,8 +262,8 @@ namespace Wox
         {
             if (_settings.RememberLastLaunchLocation)
             {
-                _settings.WindowLeft = Left;
-                _settings.WindowTop = Top;
+                _settings.WindowLeft = 0;
+                _settings.WindowTop = 0;
             }
         }
 
